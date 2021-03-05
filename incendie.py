@@ -7,4 +7,3 @@
 # Elise REBER
 # https://github.com/uvsq-info/l1-python
 #########################################
-#test
