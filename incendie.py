@@ -15,7 +15,6 @@ racine.title("Simulation D'incendie")
 
 
 #Constantes
-
 LARGEUR = 400
 HAUTEUR = 400
 COULEUR_QUADR = "blue"
@@ -36,14 +35,26 @@ def quadrillage():
         x += COTE
 
 
+def quadrillage2():
+    "Affiche le quadrillage de rectangle de longeur HAUTEUR"
+    "et de largeur LARGEUR"
+    x = 0
+    y = 0
+    for i in range(HAUTEUR):
+            terrain.create_rectangle(x, y+COTE)
+            x += COTE
+            
+
+
 # Création des widgets
 
-terrain = tk.Canvas(racine, width=400, height=400, bg="red")
+terrain = tk.Canvas(racine, width=LARGEUR, height=HAUTEUR, bg="red")
 bouton_stop = tk.Button(racine, text="ARRETER")
 bouton_start = tk.Button(racine, text="DEMARRER")
 bouton_etape = tk.Button(racine, text="ETAPE SUIVANTE")
 bouton_aleatoire = tk.Button(racine, text="GENERER UN TERRAIN ALEATOIRE")
-bouton_fichier = tk.Button(racine, text="CHARGER UN TERRAIN A PARTIR D'UN FICHIER")
+bouton_fichier = tk.Button(racine, text="CHARGER UN TERRAIN"
+                                        " A PARTIR D'UN FICHIER")
 bouton_sauvegarder = tk.Button(racine, text="SAUVEGARDER")
 label_nbre_parcelles = tk.Label(racine, bg="yellow")
 label_nbre_etapes = tk.Label(racine, bg="blue")
@@ -60,6 +71,6 @@ bouton_sauvegarder.grid(row=0, column=3)
 label_nbre_parcelles.grid(row=4, column=1, columnspan=3)
 label_nbre_etapes.grid(row=5, column=1, columnspan=3)
 
-terrain.bind(quadrillage())
+terrain.bind(quadrillage2())
 
 racine.mainloop()
