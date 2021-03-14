@@ -14,7 +14,7 @@ racine = tk.Tk()
 racine.title("Simulation D'incendie")
 
 
-#Constantes
+# Constantes
 
 LARGEUR = 400
 HAUTEUR = 400
@@ -34,6 +34,42 @@ def quadrillage():
     while x <= LARGEUR:
         terrain.create_line((x, 0), (x, HAUTEUR), fill=COULEUR_QUADR)
         x += COTE
+
+
+# def step():
+    # effectue étape (clavier + souris)
+
+    # PRAIRIE
+    # if color(parcelle) == "yellow":
+    #   if nb_parcelle-1[state] == FEU or nb_parcelle+1[state] == FEU or
+    #   nb_parcelle-10[state] == FEU or nb_parcelle+10[state] == FEU:
+    #       ParcellePrendFeu(parcelle) # Julie
+        #   terrain.itemconfigure(nb_parcelle)
+
+    # EAU + ÈTEINT
+    # if color(parcelle) == "blue" or color(parcelle) == "black":
+    #   pass
+
+    # FORÊT
+    # if color(parcelle) == "green":
+    #   ForêtPrendFeu(parcelle) # Kubilay
+
+    # EN FEU
+    # if color(parcelle) == "red":
+    #   compteur_cendre -= 1
+    #   if compteur_cendre == 0:
+    #       terrain.itemconfigure(parcelle, color="grey")
+    #       remplacer compteur_cendre par compteur_éteint=
+
+    # if color(parcelle) == "grey":
+    #   compteur_éteint -=1
+    #   if compteur_éteint == 0:
+    #       terrain.itemconfig(parcelle, color="black")
+
+    #   if forêt, prend feu avc prob 0.1 × nf où nf est le nombre de ses
+    #   voisins en feu
+
+    #   bords TOUCHÉS mais pas affectés et n'affectent pas
 
 
 # Création des widgets
